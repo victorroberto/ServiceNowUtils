@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2022-11-17 18:50:15">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>Botao Try it Portal, para visualizar mais rapidamente os catalog itens no portal</description>
+<inserted/>
+<name>VRS026 - Botão Try It (Portal)</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>b6c326731b0fdd5004d4a68fe54bcbe8</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>uni28875</sys_created_by>
+<sys_created_on>2022-11-17 18:50:15</sys_created_on>
+<sys_id>bf6344601bd3559004d4a68fe54bcb2b</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>uni28875</sys_updated_by>
+<sys_updated_on>2022-11-17 18:50:15</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_action_380eb4514faa3200687d27118110c77b</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name&gt;u_fpc_try_it_portal&lt;/action_name&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;true&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments&gt;Opens the current Catalog Item within a Service Portal in a new tab/window.  Based on the OOB "Try it" UI Action.&amp;#13;
+&amp;#13;
+Set the default Service Portal that you want to the open the item in on the line with "var portal = "sp"".&lt;/comments&gt;&lt;condition&gt;current.active == true&lt;/condition&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;hint&gt;Visualize este item no Portal de Serviços (abre uma nova aba/janela)&lt;/hint&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;Try It (Portal)&lt;/name&gt;&lt;onclick&gt;uFpcTryItPortal()&lt;/onclick&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[function uFpcTryItPortal() {
+    //switched to using safer OOTB objects instead of window.open
+    //window.open("sp?id=sc_cat_item&amp;sys_id=" + g_form.getUniqueValue(), "_blank");
+
+    //view this item within the Service Portal in a new tab/window
+	var portal = "unimedbh";  //the portal you want to use for testing	
+	var page = (g_form.getTableName() == "sc_cat_item_guide") ? "sc_cat_item_guide" : "sc_cat_item";  //Order Guides are rendered by a different page
+
+    var gUrl = new GlideURL(portal); //build a new GlideURL object
+    gUrl.addParam("id", page);  //the page to display
+	gUrl.addParam("sys_id", g_form.getUniqueValue()); //add the sys_id of this Catalog Item to render
+
+    //and then display the Catalog Item in a new tab/window
+    g_navigation.open (gUrl.getURL(), "_blank");
+}]]&gt;&lt;/script&gt;&lt;show_insert&gt;false&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;$jcoyne&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-05-04 14:23:00&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;380eb4514faa3200687d27118110c77b&lt;/sys_id&gt;&lt;sys_mod_count&gt;26&lt;/sys_mod_count&gt;&lt;sys_name&gt;Try It (Portal)&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_380eb4514faa3200687d27118110c77b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;uni28875&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-15 22:38:53&lt;/sys_updated_on&gt;&lt;table&gt;sc_cat_item&lt;/table&gt;&lt;ui11_compatible&gt;false&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-62176038</payload_hash>
+<remote_update_set display_value="VRS026 - Botão Try It (Portal)">bf6344601bd3559004d4a68fe54bcb2b</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>uni28875</sys_created_by>
+<sys_created_on>2022-11-17 18:50:15</sys_created_on>
+<sys_id>f36344601bd3559004d4a68fe54bcb2c</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1847d722ef20000001</sys_recorded_at>
+<sys_updated_by>uni28875</sys_updated_by>
+<sys_updated_on>2022-11-17 18:50:15</sys_updated_on>
+<table>sc_cat_item</table>
+<target_name>Try It (Portal)</target_name>
+<type>UI Action</type>
+<update_domain>global</update_domain>
+<update_guid>5ca4eab3f70fdd503593f686040cacbe</update_guid>
+<update_guid_history>5ca4eab3f70fdd503593f686040cacbe:-62176038,dd9466b3b30fdd50455d91e969d40d2b:-62176038,dad051a6ce4bd150995b2293daf64478:-1553103462,c7c0dd66504bd150f8798f0e8d8990da:1635912310,14c09966184bd150673e8076b2140d35:-571895036,c4ffcde2144bd150447d7b9b24c61f2e:302864050</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
