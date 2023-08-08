@@ -1,0 +1,519 @@
+{
+  "Orders": {
+    "order_id": "1-2RMYNEFH_VS02_1684157512900",
+    "account": "1000659482",
+    "order_date": "05/05/2023 17:13:21",
+    "contact": "1-4FGLUI",
+    "u_order_source": "Quote",
+    "u_order_number": "1-216842470571_VS02_1684157512900",
+    "u_order_type": "Sales Order",
+    "u_order_quote_id": "1-2RM6EP4B_VS02_1684157512900",
+    "state": "Booked",
+    "u_order_sub_type": "Amendment",
+    "msPlusColo": false,
+    "msInfResp": "",
+    "ListOfLineItems": {
+      "LineItems": [
+        {
+          "u_line_id": "1-2RMYNEFK_VS02_1684157512900",
+          "quantity": "1",
+          "state": "Pending Configuration",
+          "u_action_code": "Add",
+          "u_adjusted_list_price": "",
+          "u_currency_code": "BRL",
+          "u_discount_amount": "",
+          "u_discount_percent": "",
+          "u_eqx_cabinet_number": "",
+          "u_eqx_cabinet_unique_space_primary_id": "",
+          "u_eqx_commit_date": "",
+          "u_eqx_current_billing_mrc": "",
+          "u_eqx_current_billing_mrr": "",
+          "u_eqx_current_mrc_price": "",
+          "u_eqx_densed_mrc": "",
+          "u_eqx_disc_approver": "",
+          "u_eqx_effective_price": "",
+          "u_eqx_free_months": "",
+          "u_eqx_inflight_change_required": "",
+          "u_eqx_inflight_flag": "",
+          "u_eqx_root_inflight_flag": "",
+          "u_eqx_root_integra_flag": "Y",
+          "u_eqx_sales_quantity": "0",
+          "u_eqx_unique_space_id": "",
+          "u_eqx_unique_space_primary_id": "",
+          "u_item_price": "",
+          "u_mrc_cxtotal": "11.02",
+          "u_nrc_cxtotal": "0",
+          "u_parent_order_item_id": "",
+          "u_part_number": "HDW00008.PROD",
+          "u_product": "Computer Hardware - Server Product",
+          "u_product_id": "1-1GNILKBQ",
+          "u_quote_item_id": "1-2RM6EP5W",
+          "u_root_part_number": "HDW00008.PROD",
+          "u_service_account_id": "1-JGKCVN",
+          "u_ibx": "RJ2",
+          "unit_price": "",
+          "effective_date": "",
+          "AssetIntegrationId": "1-2RMYNEF9",
+          "RootProdPromInstanceId": "",
+          "CMDB_Asset_Number": "",
+          "Siebel_Asset_Number": "",
+          "ListOfOrderItemXa": {
+            "OrderItemAttributes": [
+              { "DisplayName": "IBX", "Name": "IBX", "Value": "RJ2" },
+              {
+                "DisplayName": "Legacy Asset Flag",
+                "Name": "Legacy Asset Flag",
+                "Value": ""
+              },
+              {
+                "DisplayName": "License Term",
+                "Name": "License Term",
+                "Value": "36"
+              },
+              { "DisplayName": "POE Count", "Name": "POE Count", "Value": "" },
+              {
+                "DisplayName": "POF Name",
+                "Name": "POF Name",
+                "Value": "Computer Hardware - Server Product"
+              },
+              {
+                "DisplayName": "Term Band",
+                "Name": "Term Band",
+                "Value": "36"
+              },
+              { "DisplayName": "USID_ID", "Name": "USID_ID", "Value": "" },
+              {
+                "DisplayName": "Unique Space ID",
+                "Name": "Unique Space ID",
+                "Value": "-"
+              }
+            ]
+          },
+          "LineItems": [
+            {
+              "u_line_id": "1-2RMYNEFT_VS02_1684157512900",
+              "quantity": "1",
+              "state": "Pending Configuration",
+              "u_action_code": "Add",
+              "u_adjusted_list_price": "0",
+              "u_currency_code": "BRL",
+              "u_discount_amount": "",
+              "u_discount_percent": "",
+              "u_eqx_cabinet_number": "",
+              "u_eqx_cabinet_unique_space_primary_id": "",
+              "u_eqx_commit_date": "",
+              "u_eqx_current_billing_mrc": "",
+              "u_eqx_current_billing_mrr": "",
+              "u_eqx_current_mrc_price": "",
+              "u_eqx_densed_mrc": "",
+              "u_eqx_disc_approver": "",
+              "u_eqx_effective_price": "",
+              "u_eqx_free_months": "",
+              "u_eqx_inflight_change_required": "",
+              "u_eqx_inflight_flag": "",
+              "u_eqx_root_inflight_flag": "",
+              "u_eqx_root_integra_flag": "Y",
+              "u_eqx_sales_quantity": "0",
+              "u_eqx_unique_space_id": "",
+              "u_eqx_unique_space_primary_id": "",
+              "u_item_price": "0",
+              "u_mrc_cxtotal": "0",
+              "u_nrc_cxtotal": "0",
+              "u_parent_order_item_id": "1-2RMYNEFK_VS02_1684157512900",
+              "u_part_number": "HDW00008.ELEM",
+              "u_product": "Computer Hardware - Server",
+              "u_product_id": "1-1GNILKD0",
+              "u_quote_item_id": "1-2RM6EP6J",
+              "u_root_part_number": "HDW00008.PROD",
+              "u_service_account_id": "1-JGKCVN",
+              "u_ibx": "RJ2",
+              "unit_price": "",
+              "CMDB_Asset_Number": "",
+              "Siebel_Asset_Number": "",
+              "ListOfOrderItemXa": {
+                "OrderItemAttributes": [
+                  {
+                    "DisplayName": "Additional Info",
+                    "Name": "Additional Info",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Bill Agr # / SO #",
+                    "Name": "Bill Agr # / SO #",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Bill Agr Renew / End Date",
+                    "Name": "Bill Agr Renew / End Date",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Cabinet #",
+                    "Name": "Cabinet #",
+                    "Value": ""
+                  },
+                  { "DisplayName": "Capex", "Name": "Capex", "Value": "0" },
+                  {
+                    "DisplayName": "Capex Currency",
+                    "Name": "Capex Currency",
+                    "Value": "BRL"
+                  },
+                  { "DisplayName": "MRC", "Name": "Costs", "Value": "0" },
+                  {
+                    "DisplayName": "Current Date",
+                    "Name": "Current Date",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Customer UCM Id",
+                    "Name": "Customer UCM Id",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Equipment Serial#",
+                    "Name": "Equipment Serial#",
+                    "Value": ""
+                  },
+                  { "DisplayName": "Factors", "Name": "Factors", "Value": "" },
+                  {
+                    "DisplayName": "Free Text",
+                    "Name": "Free Text",
+                    "Value": "N/A"
+                  },
+                  {
+                    "DisplayName": "Hardware Model",
+                    "Name": "Hardware Model",
+                    "Value": "N/A"
+                  },
+                  {
+                    "DisplayName": "Host Name",
+                    "Name": "Host Name",
+                    "Value": ""
+                  },
+                  { "DisplayName": "IBX", "Name": "IBX", "Value": "RJ2" },
+                  {
+                    "DisplayName": "Legacy Id",
+                    "Name": "Legacy Id",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Legacy Info",
+                    "Name": "Legacy Info",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Legacy Product description",
+                    "Name": "Legacy Product description",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "License Term",
+                    "Name": "License Term",
+                    "Value": "36"
+                  },
+                  {
+                    "DisplayName": "Managed",
+                    "Name": "Managed",
+                    "Value": "No"
+                  },
+                  {
+                    "DisplayName": "Manufacturer",
+                    "Name": "Manufacturer",
+                    "Value": "N/A"
+                  },
+                  { "DisplayName": "Markup", "Name": "Markup", "Value": "N" },
+                  {
+                    "DisplayName": "Modality",
+                    "Name": "Modality",
+                    "Value": "Portfolio Equinix"
+                  },
+                  { "DisplayName": "NRC", "Name": "NRC", "Value": "0" },
+                  { "DisplayName": "Opex", "Name": "Opex", "Value": "0" },
+                  {
+                    "DisplayName": "Opex Currency",
+                    "Name": "Opex Currency",
+                    "Value": "BRL"
+                  },
+                  {
+                    "DisplayName": "POE Name",
+                    "Name": "POE Name",
+                    "Value": "Computer Hardware - Server"
+                  },
+                  {
+                    "DisplayName": "POF Name",
+                    "Name": "POF Name",
+                    "Value": "Computer Hardware - Server Product"
+                  },
+                  { "DisplayName": "SLA", "Name": "SLA", "Value": "99.45" },
+                  {
+                    "DisplayName": "Server CPU Core",
+                    "Name": "Server CPU Core",
+                    "Value": "6"
+                  },
+                  {
+                    "DisplayName": "Server CPU Quantity",
+                    "Name": "Server CPU Quantity",
+                    "Value": "Dual"
+                  },
+                  {
+                    "DisplayName": "Server Form",
+                    "Name": "Server Form",
+                    "Value": "4 LFF"
+                  },
+                  {
+                    "DisplayName": "Server RAM",
+                    "Name": "Server RAM",
+                    "Value": "N/A"
+                  },
+                  {
+                    "DisplayName": "Standard Product",
+                    "Name": "Standard Product",
+                    "Value": "Portfolio Equinix"
+                  },
+                  {
+                    "DisplayName": "System Name",
+                    "Name": "System Name",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Term Band",
+                    "Name": "Term Band",
+                    "Value": "36"
+                  },
+                  { "DisplayName": "USID_ID", "Name": "USID_ID", "Value": "" },
+                  {
+                    "DisplayName": "Unique Space ID",
+                    "Name": "Unique Space ID",
+                    "Value": "-"
+                  }
+                ]
+              }
+            },
+            {
+              "u_line_id": "1-2RMYNEGW_VS02_1684157512900",
+              "quantity": "1",
+              "state": "Pending Configuration",
+              "u_action_code": "Add",
+              "u_adjusted_list_price": "0",
+              "u_currency_code": "BRL",
+              "u_discount_amount": "",
+              "u_discount_percent": "",
+              "u_eqx_cabinet_number": "",
+              "u_eqx_cabinet_unique_space_primary_id": "",
+              "u_eqx_commit_date": "",
+              "u_eqx_current_billing_mrc": "",
+              "u_eqx_current_billing_mrr": "",
+              "u_eqx_current_mrc_price": "",
+              "u_eqx_densed_mrc": "",
+              "u_eqx_disc_approver": "",
+              "u_eqx_effective_price": "",
+              "u_eqx_free_months": "",
+              "u_eqx_inflight_change_required": "",
+              "u_eqx_inflight_flag": "",
+              "u_eqx_root_inflight_flag": "",
+              "u_eqx_root_integra_flag": "Y",
+              "u_eqx_sales_quantity": "0",
+              "u_eqx_unique_space_id": "",
+              "u_eqx_unique_space_primary_id": "",
+              "u_item_price": "0",
+              "u_mrc_cxtotal": "0",
+              "u_nrc_cxtotal": "0",
+              "u_parent_order_item_id": "1-2RMYNEFK_VS02_1684157512900",
+              "u_part_number": "HDW00008.NR",
+              "u_product": "Computer Hardware - Server - Installation Fee",
+              "u_product_id": "1-1GNILKEW",
+              "u_quote_item_id": "1-2RM6EP7N",
+              "u_root_part_number": "HDW00008.PROD",
+              "u_service_account_id": "1-JGKCVN",
+              "u_ibx": "RJ2",
+              "unit_price": "",
+              "CMDB_Asset_Number": "",
+              "Siebel_Asset_Number": "",
+              "ListOfOrderItemXa": {
+                "OrderItemAttributes": [
+                  { "DisplayName": "Costs", "Name": "Costs", "Value": "0" },
+                  { "DisplayName": "Markup", "Name": "Markup", "Value": "N" },
+                  {
+                    "DisplayName": "Modality",
+                    "Name": "Modality",
+                    "Value": "Portfolio Equinix"
+                  },
+                  {
+                    "DisplayName": "Server Form",
+                    "Name": "Server Form",
+                    "Value": "4 LFF"
+                  }
+                ]
+              }
+            },
+            {
+              "u_line_id": "1-2RMYNEH1_VS02_1684157512900",
+              "quantity": "1",
+              "state": "Pending Configuration",
+              "u_action_code": "Add",
+              "u_adjusted_list_price": "",
+              "u_currency_code": "BRL",
+              "u_discount_amount": "",
+              "u_discount_percent": "",
+              "u_eqx_cabinet_number": "",
+              "u_eqx_cabinet_unique_space_primary_id": "",
+              "u_eqx_commit_date": "",
+              "u_eqx_current_billing_mrc": "",
+              "u_eqx_current_billing_mrr": "",
+              "u_eqx_current_mrc_price": "",
+              "u_eqx_densed_mrc": "",
+              "u_eqx_disc_approver": "",
+              "u_eqx_effective_price": "",
+              "u_eqx_free_months": "",
+              "u_eqx_inflight_change_required": "",
+              "u_eqx_inflight_flag": "",
+              "u_eqx_root_inflight_flag": "",
+              "u_eqx_root_integra_flag": "Y",
+              "u_eqx_sales_quantity": "0",
+              "u_eqx_unique_space_id": "",
+              "u_eqx_unique_space_primary_id": "",
+              "u_item_price": "10",
+              "u_mrc_cxtotal": "11.02",
+              "u_nrc_cxtotal": "0",
+              "u_parent_order_item_id": "1-2RMYNEFK_VS02_1684157512900",
+              "u_part_number": "HDW00002.ELEM",
+              "u_product": "Server Hard Disk",
+              "u_product_id": "1-1GNHZO55",
+              "u_quote_item_id": "1-2RM6EPCV",
+              "u_root_part_number": "HDW00008.PROD",
+              "u_service_account_id": "1-JGKCVN",
+              "u_ibx": "RJ2",
+              "unit_price": "10",
+              "CMDB_Asset_Number": "",
+              "Siebel_Asset_Number": "",
+              "ListOfOrderItemXa": {
+                "OrderItemAttributes": [
+                  {
+                    "DisplayName": "Bill Agr # / SO #",
+                    "Name": "Bill Agr # / SO #",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Bill Agr Renew / End Date",
+                    "Name": "Bill Agr Renew / End Date",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Cabinet #",
+                    "Name": "Cabinet #",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Current Date",
+                    "Name": "Current Date",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Customer UCM Id",
+                    "Name": "Customer UCM Id",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Equipment Serial#",
+                    "Name": "Equipment Serial#",
+                    "Value": ""
+                  },
+                  { "DisplayName": "Factors", "Name": "Factors", "Value": "" },
+                  {
+                    "DisplayName": "Hardware Asset#",
+                    "Name": "Hardware Asset#",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Hardware Model",
+                    "Name": "Hardware Model",
+                    "Value": "N/A"
+                  },
+                  {
+                    "DisplayName": "Host Name",
+                    "Name": "Host Name",
+                    "Value": ""
+                  },
+                  { "DisplayName": "IBX", "Name": "IBX", "Value": "RJ2" },
+                  {
+                    "DisplayName": "Legacy Id",
+                    "Name": "Legacy Id",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Legacy Info",
+                    "Name": "Legacy Info",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Legacy Product description",
+                    "Name": "Legacy Product description",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "License Term",
+                    "Name": "License Term",
+                    "Value": "36"
+                  },
+                  {
+                    "DisplayName": "Manufacturer",
+                    "Name": "Manufacturer",
+                    "Value": "N/A"
+                  },
+                  {
+                    "DisplayName": "Modality",
+                    "Name": "Modality",
+                    "Value": "Portfolio Equinix"
+                  },
+                  {
+                    "DisplayName": "POF Name",
+                    "Name": "POF Name",
+                    "Value": "Computer Hardware - Server Product"
+                  },
+                  { "DisplayName": "Qty", "Name": "Qty", "Value": "8" },
+                  { "DisplayName": "SLA", "Name": "SLA", "Value": "" },
+                  {
+                    "DisplayName": "Server CPU Quantity",
+                    "Name": "Server CPU Quantity",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Server Form",
+                    "Name": "Server Form",
+                    "Value": "8 SFF"
+                  },
+                  {
+                    "DisplayName": "Server HD Options",
+                    "Name": "Server HD Options",
+                    "Value": "SATA 3.5\" 15K RPM - 600GB"
+                  },
+                  {
+                    "DisplayName": "Standard Product",
+                    "Name": "Standard Product",
+                    "Value": "Portfolio Equinix"
+                  },
+                  {
+                    "DisplayName": "System Name",
+                    "Name": "System Name",
+                    "Value": ""
+                  },
+                  {
+                    "DisplayName": "Term Band",
+                    "Name": "Term Band",
+                    "Value": "36"
+                  },
+                  { "DisplayName": "USID_ID", "Name": "USID_ID", "Value": "" },
+                  {
+                    "DisplayName": "Unique Space ID",
+                    "Name": "Unique Space ID",
+                    "Value": "-"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
