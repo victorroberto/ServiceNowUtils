@@ -1,0 +1,106 @@
+{
+  "sns_printToLog": {
+    "scope": "javascript",
+    "prefix": "sns_Log",
+    "body": [
+      "gs.log('$1: ' + $2, '$3');"
+    ],
+    "description": "Insert log to log table"
+  },
+  "sns_printToLogStringify": {
+    "scope": "javascript",
+    "prefix": "sns_Log_Stringify",
+    "body": [
+      "gs.log('$1: ' + JSON.stringify({""  '$2': $3,""}), '$4');"
+    ],
+    "description": "Insert stringfied log to log table"
+  },
+  "sns_glideAjaxSingleParam": {
+    "scope": "javascript",
+    "prefix": "sns_glideAjax_SingleParam",
+    "body": [
+      "/* Client Script */""function onLoad() {""  var ga = new GlideAjax('scriptIncludeName');""  ga.addParam('sysparm_name', 'functionName');""  ga.addParam('sysparm_name2', 'value');""  ga.getXMLAnswer(functionName);""}""function functionName(response) {""  alert(response);""}""/* Script include */""var scriptIncludeName = Class.create();""scriptIncludeName.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {""  functionName: function () {""    var variableName = this.getParameter('sysparm_name2');""    var grUser = new GlideRecord('sys_user');""    grUser.get('user_name', variableName);""    var result = {""      'name': grUser.getDisplayValue('name')""    };""    return JSON.stringify(result);""  },""  type: 'scriptIncludeName'""});"
+    ],
+    "description": "Insert GlideRecord snippet code that return a single parameter"
+  },
+  "sns_glideAjaxMultiParam": {
+    "scope": "javascript",
+    "prefix": "sns_glideAjax_MultiParam",
+    "body": [
+      "/* Client Script */""function onLoad() {""  var ga = new GlideAjax('scriptIncludeName');""  ga.addParam('sysparm_name', 'functionName');""  ga.addParam('sysparm_name2', 'value');""  ga.getXML(functionName);""}""function functionName(response) {""  var answer = response.responseXML.documentElement.getAttribute('answer');""  if (answer) {""    var returneddata = answer.evalJSON(true);""    alert(returneddata.sys_id, returneddata.name);""  }""}""/* Script include */""var scriptIncludeName = Class.create();""scriptIncludeName.prototype = Object.extendsObject(AbstractAjaxProcessor, {""  functionName: function () {""    var variableName = this.getParameter('sysparm_name2');""    var gr = new GlideRecord('table');""    if (gr.get(variableName)) {""      var json = new JSON();""      var results = {""        'sys_id': gr.getValue('sys_id'),""        'name': gr.getValue('name')""      };""      return json.encode(results);""    }""  },""  type: 'scriptIncludeName'""});"
+    ],
+    "description": "Insert GlideRecord snippet code that return multi parameters"
+  },
+  "sns_glideAjaxAsynchronous": {
+    "scope": "javascript",
+    "prefix": "sns_glideAjax_Asynchronous",
+    "body": [
+      "/* Client Script */""var ga = new GlideAjax('HelloWorld');""ga.addParam('sysparm_name', 'helloWorld');""ga.addParam('sysparm_user_name', 'Bob');""ga.getXML(HelloWorldParse);""function HelloWorldParse(response) {""  var answer = response.responseXML.documentElement.getAttribute('answer');""  alert(answer);""}""/* Script include */""var HelloWorld = Class.create();""HelloWorld.prototype = Object.extendsObject(AbstractAjaxProcessor, {""  helloWorld: function () { return 'Hello ' + this.getParameter('sysparm_user_name') + '!'; },""  _privateFunction: function () { // this function is not client callable ""  }""});"
+    ],
+    "description": "Insert GlideRecord snippet code that runs asynchronous"
+  },
+  "sns_glideAjaxSynchronous": {
+    "scope": "javascript",
+    "prefix": "sns_glideAjax_Synchronous",
+    "body": [
+      "/* Client Script */""var ga = new GlideAjax('HelloWorld');""ga.addParam('sysparm_name', 'helloWorld');""ga.addParam('sysparm_user_name', 'Bob');""ga.getXMLWait();""alert(ga.getAnswer());""/* Script include */""var HelloWorld = Class.create();""HelloWorld.prototype = Object.extendsObject(AbstractAjaxProcessor, {""  helloWorld: function () { return 'The Server Says Hello ' + this.getParameter('sysparm_user_name') + '!'; }""});"
+    ],
+    "description": "Insert GlideRecord snippet code that runs synchronous"
+  },
+  "sns_glideRecordQuery": {
+    "scope": "javascript",
+    "prefix": "sns_GlideRecord_Query",
+    "body": [
+      "var gr = new GlideRecord('table');""gr.addQuery('fieldName', 'value');""gr.query();""while (gr.next()) {""  gs.log('State is ' + gr.state);""}"
+    ],
+    "description": "Insert GlideRecord query snippet code example"
+  },
+  "sns_glideRecordQueryGET": {
+    "scope": "javascript",
+    "prefix": "sns_GlideRecord_Query_Get",
+    "body": [
+      "var gr = new GlideRecord('table');""if (gr.get('active', true)) {""  gs.log('State is ' + gr.state);""}"
+    ],
+    "description": "Insert GlideRecord query snippet code example with gr.get() method"
+  },
+  "sns_glideRecordAddEncodedQuery": {
+    "scope": "javascript",
+    "prefix": "sns_GlideRecord_AddEncodedQuery",
+    "body": [
+      "var gr = new GlideRecord('table');""var strQuery = 'active=true^category=software^ORcategory=hardware';""gr.addEncodedQuery(strQuery);""gr.query();"
+    ],
+    "description": "Insert GlideRecord query snippet code example with gr.addEncodedQuery method"
+  },
+  "sns_glideRecordGetRefRecord": {
+    "scope": "javascript",
+    "prefix": "sns_GlideRecord_GetRefRecord",
+    "body": [
+      "var caller = current.caller_id.getRefRecord();""caller.email = 'test@test.com';""caller.update();"
+    ],
+    "description": "Insert GlideRecord snippet code example with .getRefRecord() method"
+  },
+  "sns_glideRecordInsert": {
+    "scope": "javascript",
+    "prefix": "sns_GlideRecord_Insert",
+    "body": [
+      "var gr = new GlideRecord('table');""gr.initialize();""gr.short_description = 'Network problem';""gr.category = 'software';""gr.caller_id.setDisplayValue('Joe Employee');""gr.insert();"
+    ],
+    "description": "Insert GlideRecord insert snippet code example"
+  },
+  "sns_glideRecordUpdate": {
+    "scope": "javascript",
+    "prefix": "sns_GlideRecord_Update",
+    "body": [
+      "var gr = new GlideRecord('table');""gr.addQuery('active', true);""gr.query();""while (gr.next()) {""  gr.active = false;""  gr.update();""}"
+    ],
+    "description": "Insert GlideRecord update snippet code example"
+  },
+  "sns_glideRecordDelete": {
+    "scope": "javascript",
+    "prefix": "sns_GlideRecord_Delete",
+    "body": [
+      "var gr = new GlideRecord('table');""gr.addQuery('active', false);""gr.query();""gr.deleteMultiple(); //Deletes all records in the record set""while (gr.next()) {""  gr.deleteRecord(); //Delete each record in the query result set""}"
+    ],
+    "description": "Insert GlideRecord delete snippet code example"
+  },
+}

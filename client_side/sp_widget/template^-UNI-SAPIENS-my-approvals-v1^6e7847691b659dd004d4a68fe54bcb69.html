@@ -1,0 +1,199 @@
+<div>
+  <header class="header-approval">
+    <form class="search-bar" data-tab="SAPIENS">
+      <input type="text" ng-model="c.data.query" class="search-bar-input"
+        placeholder="Número, descrição ou fornecedor..." ng-change="c.filter()" />
+      <img src="search.svg" alt="Search icon." />
+    </form>
+
+    <div>
+      <button name="getApprovals" class="btn btn-default" style="border-width:1px;"
+        ng-click="c.update();">Atualizar</button>
+      <span class="counter">
+        <span ng-if="c.data.counter > 0">{{c.data.counter}}</span>
+        <span ng-if="c.data.counter > 1">Registros</span>
+        <span ng-if="c.data.counter === 1">Registro</span>
+      </span>
+    </div>
+  </header>
+
+  <div class="padding-top-20" ng-class="{'padder-b-none': data.approvals.length != 0}">
+    <div ng-if="c.filteredApprovals.length == 0" class="app-wrap">
+      ${You have no pending approvals}
+    </div>
+    <p class="text-center" ng-show="data.loading" ng-hide="!data.loading"><span
+        class="fa fa-refresh fa-5x fa-spin"></span></p>
+
+    <div class="approval-list">
+      <div class="app-wrap approval-item" ng-repeat="item in c.filteredApprovals">
+        <div>
+          <h4 class="app-title">
+            <a class="link"
+              href="?id=approval_oc&table=sysapproval_approver&sys_id={{::item.app_id}}&sistema={{::item.sistema}}">
+              {{::item.number_oc_sc}} - {{item.abb}} | {{item.sistema}}
+            </a>
+            <span class="circle" data-toggle="modal" data-target="#md-{{item.sys_id}}">
+              <div class="fa fa-info"></div>
+            </span>
+          </h4>
+
+          <div class="app-info">
+            <span ng-if="item.fornecedor">
+              <strong> Fornecedor: </strong>
+              <span>{{item.fornecedor}}</span>
+            </span>
+
+            <span ng-if="item.valor">
+              <strong> Valor: </strong>
+              <span>{{item.valor}}</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="wrap-buttons">
+          <button name="approve" class="btn btn-default btn-approve"
+            ng-click="c.approver('approve', item.sys_id, '',item.number_oc_sc)">
+            <div class="loader"></div>
+            <span>
+              ${Approve}
+            </span>
+          </button>
+
+          <button name="approve" class="btn btn-default btn-reject" data-toggle="modal"
+            data-target="#md-reject-{{item.sys_id}}">
+            <div class="loader"></div>
+            <span>
+              ${Reject}
+            </span>
+          </button>
+        </div>
+
+        <!-- Modal Info-->
+        <div class="modal fade" id="md-{{item.sys_id}}" role="dialog">
+          <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a data-toggle="tab" href="#home-{{item.number}}" onClick="return false">Item da
+                      Solicitação de Compra</a></li>
+                  <li><a data-toggle="tab" href="#menu1-{{item.number}}" onClick="return false">Aprovações</a></li>
+                </ul>
+
+                <div class="tab-content pt-20">
+                  <div id="home-{{item.number}}" class="tab-pane fade in active">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Número</th>
+                            <th>Item</th>
+                            <th>Quantidade</th>
+                            <th>Valor Unitário</th>
+                            <th>Valor Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="i in item.items">
+                            <td>{{i.ordem}}</td>
+                            <td>{{i.complemento}}</td>
+                            <td>{{i.quantidade}}</td>
+                            <td>{{i.preco}}</td>
+                            <td>{{i.total}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div id="menu1-{{item.number}}" class="tab-pane fade">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Status</th>
+                            <th>Aprovador</th>
+                            <th>Comentários</th>
+                            <th>Aprovado em</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="i in item.approvers">
+                            <td>
+                              <span class="app-circle" ng-class="::i.color"></span>
+                              {{i.state}}
+                            </td>
+                            <td>{{i.approver}}</td>
+                            <td>{{i.comments}}</td>
+                            <td>{{i.approved_at}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Modal Reject-->
+        <div class="modal fade" id="md-reject-{{item.sys_id}}" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form">
+                  <label>Precisamos saber, qual o motive da rejeição?</label>
+                  <textarea ng-model="c.data.comment" class="form-control" placeholder="Comentário" value=" " rows="5">
+                  </textarea>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button name="approve" class="btn btn-default btn-block btn-reject" data-dismiss="modal"
+                  ng-click="c.approver('reject', item.sys_id, c.data.comment, item.number_oc_sc)">
+                  <div class="loader"></div>
+                  <span>
+                    ${Reject}
+                  </span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOW MORE -->
+    <button class="show-more btn btn-default" ng-click="c.showMore()"
+      ng-class="{ loaded: c.data.counter === 0 || c.data.currentItems >= c.data.counter }">
+      Mostrar Mais
+    </button>
+  </div>
+
+  <!-- footer -->
+  <div class="panel-footer" ng-if="c.data.approvals.length > c.data.maximum_entries">
+    <div class="btn-toolbar m-r pull-left">
+      <div class="btn-group">
+        <a href="javascript:void(0)" class="btn btn-default" aria-label="Previous" ng-disabled="c.currentPage == 1"
+          ng-click="c.setCurrentPage(c.currentPage -1)"><i class="fa fa-chevron-left"></i></a>
+      </div>
+
+      <div class="btn-group">
+        <a href="javascript:void(0)" class="btn btn-default" aria-label="Next" id="prev-tab-next"
+          ng-disabled="c.currentPage == c.numPages" ng-click="c.setCurrentPage(c.currentPage + 1)"><i
+            class="fa fa-chevron-right"></i></a>
+      </div>
+    </div>
+    <div class="m-t-xs panel-title">${Linhas {{c.start + 1}} - {{c.end}} de {{c.data.approvals.length}}}</div>
+  </div>
+
+</div>
