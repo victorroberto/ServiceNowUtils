@@ -1,0 +1,10 @@
+var gr = new GlideRecord('change_request');
+gr.addEncodedQuery("sys_id=e18296da1b2031100d35a71b234bcba3^ORDERBYDESCsys_updated_on");
+gr.query();
+
+if (gr.next()) {
+    gr.assigned_to = "7146c9344fea0700f5e08e1f0210c79b";
+    gr.start_date = "2023-10-25 08:27:31";
+    gr.end_date = "2023-10-26 08:27:31";
+    gr.update();
+}
