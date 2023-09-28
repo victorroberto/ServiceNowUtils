@@ -8,3 +8,15 @@ if (gr.next()) {
     gr.end_date = "2023-10-26 08:27:31";
     gr.update();
 }
+
+
+var gr = new GlideRecord('sn_customerservice_contract_item');
+gr.addEncodedQuery("sys_idIN8f852759dba2f850b715aa1d139619c2,d6d9ef15dbe6f850b715aa1d1396198a,^ORDERBYnumber");
+gr.query();
+
+while (gr.next()) {
+    gr.u_sub_account = "";
+    gr.update();
+    gr.u_sub_account = "bb92c6d587c031d45ea58628dabb355c";
+    gr.update();
+}
