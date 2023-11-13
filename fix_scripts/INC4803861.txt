@@ -1,0 +1,8 @@
+var gr = new GlideRecord('cmdb_ci_hyper_v_instance');
+gr.addEncodedQuery("sys_id=7e4d8404938275d4ef0af8e74dba109c^ORsys_id=41d047ab93757594ef0af8e74dba101d^ORsys_id=017b7cae878a75905ea58628dabb352f^ORsys_id=6f752176870afd905ea58628dabb3593^ORsys_id=23a5adb6870afd905ea58628dabb3583^ORsys_id=cab5e1f6870afd905ea58628dabb35e8^ORsys_id=ff6fbbb19321fd14ef0af8e74dba10d8^ORsys_id=1f6ffbf587a5fdd0c48cb845dabb3530^ORsys_id=f57ffbb19321fd14ef0af8e74dba1065^ORsys_id=2d6ff7f587a5fdd0c48cb845dabb35bb^ORDERBYname");
+gr.query();
+
+while (gr.next()) {
+    gr.u_memory_type = 'static';
+    gr.update();
+}

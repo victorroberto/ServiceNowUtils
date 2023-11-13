@@ -1,0 +1,8 @@
+var gr = new GlideRecord('sn_customerservice_case');
+gr.addEncodedQuery("sys_id=e734be5a93d2bddcef0af8e74dba1024^ORDERBYDESCopened_at");
+gr.query();
+
+while (gr.next()) {
+    gr.u_operating_unit = 'BR';
+    gr.update();
+}

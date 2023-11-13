@@ -1,0 +1,63 @@
+// Line ID - 1-2XDGNF9W
+var gr = new GlideRecord('csm_order_line_item');
+gr.addEncodedQuery("sys_id=4e4b76bc93cdf154ef0af8e74dba105a^ORDERBYname");
+gr.query();
+
+while (gr.next()) {
+    gr.u_unique_space_id = '43ebc42fdb1aa0d4545dee0c13961934';
+    gr.u_ibx = '5e1707c44f982b0069913d828110c7d6';
+    gr.update();
+}
+
+// Line ID - 1-2XDGNF9N
+var gr1 = new GlideRecord('csm_order_line_item');
+gr1.addEncodedQuery("sys_id=355bfebc93cdf154ef0af8e74dba10bd^ORDERBYname");
+gr1.query();
+
+while (gr1.next()) {
+    gr1.u_unique_space_id = '43ebc42fdb1aa0d4545dee0c13961934';
+    gr1.u_ibx = '5e1707c44f982b0069913d828110c7d6';
+    gr1.update();
+}
+
+// Line ID - 1-2XDGNEZM
+var gr4 = new GlideRecord('csm_order_line_item');
+gr4.addEncodedQuery("sys_id=ce4bb6bc93cdf154ef0af8e74dba108b^ORDERBYname");
+gr4.query();
+
+while (gr4.next()) {
+    gr4.u_unique_space_id = '43ebc42fdb1aa0d4545dee0c13961934';
+    gr4.u_ibx = '5e1707c44f982b0069913d828110c7d6';
+    gr4.update();
+}
+
+// Line ID - 1-2XDGNF9W
+var gr5 = new GlideRecord('csm_order_line_item');
+gr5.addEncodedQuery("sys_id=8a5bfebc93cdf154ef0af8e74dba10e4^ORDERBYname");
+gr5.query();
+
+while (gr5.next()) {
+    gr5.u_unique_space_id = '43ebc42fdb1aa0d4545dee0c13961934';
+    gr5.u_ibx = '5e1707c44f982b0069913d828110c7d6';
+    gr5.update();
+}
+
+// Order Task - FTASK0742338
+var gr2 = new GlideRecord('u_order_task');
+gr2.addEncodedQuery("sys_id=f3f5c8af872135d4c48cb845dabb3535^ORDERBYname");
+gr2.query();
+
+while (gr2.next()) {
+    gr2.u_unique_space_id = '43ebc42fdb1aa0d4545dee0c13961934';
+    gr2.update();
+}
+
+// Order Task - FTASK0742336
+var gr3 = new GlideRecord('u_order_task');
+gr3.addEncodedQuery("sys_id=e5f5c4af872135d4c48cb845dabb354d^ORDERBYname");
+gr3.query();
+
+while (gr3.next()) {
+    gr3.u_unique_space_id = '43ebc42fdb1aa0d4545dee0c13961934';
+    gr3.update();
+}

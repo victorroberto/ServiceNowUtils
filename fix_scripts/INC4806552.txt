@@ -1,0 +1,10 @@
+var gr = new GlideRecord('change_request');
+gr.addEncodedQuery("sys_id=1620110587523158c48cb845dabb3539^ORDERBYname");
+gr.query();
+
+while (gr.next()) {
+    gr.state = 4;
+    gr.comments = 'Change canceled as requested in INC4806552';
+    gr.setWorkflow(false);
+    gr.update();
+}
