@@ -1,0 +1,10 @@
+var count = 0;
+
+var gr = new GlideRecord('sys_user_group');
+gr.addEncodedQuery("sys_id=382771dadb396450c6445457dc9619a1^ORsys_id=8ab7ec58db46e010c6445457dc96197d^ORsys_id=f7f53377db74b810e759faa46896194c^ORsys_id=cbf57912db396450c6445457dc961918^ORDERBYname");
+gr.query();
+
+while (gr.next()) {
+    gr.manager = 'e8f1192c1be394d0bb580e966e4bcb1e';
+    gr.update();
+}
