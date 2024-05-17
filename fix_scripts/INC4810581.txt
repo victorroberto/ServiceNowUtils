@@ -1,8 +1,0 @@
-var gr = new GlideRecord('alm_hardware');
-gr.addEncodedQuery("sys_id=464d163c4f6bef40c58b8e1f0210c7b3");
-gr.query();
-
-while (gr.next()) {
-    gr.ci = 'b5c0d129dbd63850a7f8a334ca96195e';
-    gr.update();
-}

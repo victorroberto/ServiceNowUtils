@@ -1,9 +1,0 @@
-
-var gr = new GlideRecord('alm_asset');
-gr.addEncodedQuery("model.display_nameLIKEManaged Services - Custom^ORmodel.display_nameLIKEManaged Storage Type^install_statusIN6");
-gr.query();
-
-while (gr.next()) {
-    gr.install_status = 1;
-    gr.update();
-}
